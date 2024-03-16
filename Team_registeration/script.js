@@ -18,7 +18,7 @@ form.addEventListener('submit', e => {
 
     // Validate phone number
     if (!phoneRegex.test(leaderPhone)) {
-        alert("Please enter a valid 10-digit phone number.");
+        alert("Please enter a valid 10-digit phone number for the team leader.");
         return;
     }
 
@@ -56,6 +56,10 @@ teamSizeSelect.addEventListener('change', () => {
                 <div>
                     <label for="member${i}RegNo">Member ${i} Registration No. :</label>
                     <input type="text" id="member${i}RegNo" name="Member ${i} Registration No." placeholder="Enter member ${i}'s registration number" required>
+                </div>
+                <div>
+                    <label for="member${i}Phone">Member ${i} Phone No. :</label>
+                    <input type="tel" id="member${i}Phone" name="Member ${i} Phone No." placeholder="Enter member ${i}'s phone number" required>
                 </div>
             `;
             teamMembersDiv.appendChild(memberDiv);
